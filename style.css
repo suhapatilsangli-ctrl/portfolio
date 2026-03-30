@@ -1,23 +1,61 @@
 body {
-    font-family: Arial;
     margin: 0;
-    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
 }
 
 header {
-    background: #2c3e50;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 20px;
 }
 
 section {
-    background: white;
+    padding: 30px;
     margin: 20px;
-    padding: 15px;
-    border-radius: 8px;
+    background: white;
+    border-radius: 10px;
 }
 
-.project {
-    margin-bottom: 10px;
+.projects {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    background: #667eea;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
 }
