@@ -4,12 +4,18 @@ body {
     background: #f5f7fa;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
+}
+
+/* PROFILE */
+.profile {
+    width: 120px;
+    border-radius: 50%;
 }
 
 /* BUTTONS */
@@ -20,12 +26,12 @@ body {
     color: #333;
     text-decoration: none;
     border-radius: 20px;
-    transition: 0.3s;
 }
 
-.buttons a:hover {
-    background: #333;
-    color: white;
+/* DARK BUTTON */
+.dark-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
 }
 
 /* SECTIONS */
@@ -43,21 +49,19 @@ section {
     flex-wrap: wrap;
 }
 
-/* CARD */
 .card {
     flex: 1;
     padding: 20px;
     background: #f0f0f0;
     border-radius: 10px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
-/* ANIMATION (hover effect) */
 .card:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: scale(1.05);
 }
 
-/* PROJECT BUTTON */
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 10px;
@@ -68,8 +72,35 @@ section {
     text-decoration: none;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 10px;
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* DARK MODE */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark section {
+    background: #1e1e1e;
+}
+
+.dark .card {
+    background: #2a2a2a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+    }
 }
