@@ -1,43 +1,28 @@
-// DARK MODE
-document.getElementById("toggle").onclick = () => {
-  document.body.classList.toggle("dark");
+// Scroll to top
+document.getElementById("topBtn").onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-// SCROLL ANIMATION
-const elements = document.querySelectorAll(".fade");
+// Chatbot logic
+const chat = document.getElementById("chat");
+const input = document.getElementById("input");
 
-window.addEventListener("scroll", () => {
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add("show");
+input.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    let userText = input.value;
+    chat.innerHTML += "<p><b>You:</b> " + userText + "</p>";
+
+    let reply = "I am Suhani's portfolio bot 😊";
+
+    if (userText.toLowerCase().includes("skills")) {
+      reply = "She knows Java, Web Dev, SQL, and more!";
     }
-  });
+
+    if (userText.toLowerCase().includes("project")) {
+      reply = "She built E-commerce & Traffic systems.";
+    }
+
+    chat.innerHTML += "<p><b>Bot:</b> " + reply + "</p>";
+    input.value = "";
+  }
 });
-
-// TYPING EFFECT
-const text = ["Java Developer", "Web Developer", "BCS Student"];
-let i = 0, j = 0;
-let currentText = "", isDeleting = false;
-
-function type() {
-  currentText = text[i];
-
-  if (!isDeleting) {
-    j++;
-  } else {
-    j--;
-  }
-
-  document.getElementById("typing").innerHTML = currentText.substring(0, j);
-
-  if (j == currentText.length) isDeleting = true;
-  if (j == 0) {
-    isDeleting = false;
-    i = (i + 1) % text.length;
-  }
-
-  setTimeout(type, isDeleting ? 50 : 100);
-}
-
-type();
