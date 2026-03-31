@@ -1,82 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suhani Patil | Portfolio</title>
+<!-- SKILL PROGRESS -->
+<section class="card fade">
+  <h2>Skill Levels</h2>
 
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- DARK MODE -->
-<button id="toggle">🌙</button>
-
-<!-- HERO -->
-<header class="hero">
-  <h1>Suhani Patil</h1>
-  <h2><span id="typing"></span></h2>
-
-  <div class="links">
-    <a href="https://linkedin.com/in/suhani-patil-5a1508308" target="_blank">LinkedIn</a>
-    <a href="https://github.com/suhapatilsangli-ctrl" target="_blank">GitHub</a>
+  <div class="bar">
+    <p>Java</p>
+    <div class="progress"><div style="width: 85%"></div></div>
   </div>
 
-  <a href="resume.pdf" class="btn" download>Download Resume</a>
-</header>
+  <div class="bar">
+    <p>Web Development</p>
+    <div class="progress"><div style="width: 80%"></div></div>
+  </div>
 
-<!-- ABOUT -->
-<section class="card fade">
-  <h2>About Me</h2>
-  <p>
-    Motivated BCS student with strong foundation in Java, R, web development, and databases.
-    Passionate about building scalable and user-friendly applications.
-  </p>
-</section>
-
-<!-- SKILLS -->
-<section class="card fade">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Java</span>
-    <span>Spring Boot</span>
-    <span>R</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>SQL</span>
+  <div class="bar">
+    <p>SQL</p>
+    <div class="progress"><div style="width: 75%"></div></div>
   </div>
 </section>
 
-<!-- PROJECTS -->
+
+<!-- CONTACT FORM -->
 <section class="card fade">
-  <h2>Projects</h2>
+  <h2>Contact Me</h2>
 
-  <div class="project">
-    <h3>E-commerce Website</h3>
-    <p>ASP.NET + C# with authentication and cart system.</p>
-  </div>
-
-  <div class="project">
-    <h3>Traffic Violation Management System</h3>
-    <p>Java + JDBC + MySQL system.</p>
-  </div>
-
+  <form class="contact">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
-<!-- CONTACT -->
-<section class="card fade">
-  <h2>Contact</h2>
-  <p>Email: svpatil.sangli@gmail.com</p>
-  <p>Phone: 9850979585</p>
-</section>
 
-<footer>
-  <p>© 2026 Suhani Patil</p>
-</footer>
+<!-- CHATBOT -->
+<div class="chatbot">
+  <div class="chat-header">Ask Me 🤖</div>
+  <div class="chat-body" id="chat"></div>
+  <input type="text" id="input" placeholder="Type here...">
+</div>
 
-<script src="script.js"></script>
-
-</body>
-</html>
+<!-- SCROLL TOP -->
+<button id="topBtn">⬆️</button>
