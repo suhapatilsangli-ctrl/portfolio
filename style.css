@@ -1,112 +1,78 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+/* Progress Bars */
+.bar {
+  margin: 15px 0;
 }
 
-body {
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-  color: white;
-  transition: 0.3s;
+.progress {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-/* DARK MODE */
-.dark {
-  background: #111;
+.progress div {
+  height: 10px;
+  background: #ffd369;
+  animation: grow 2s ease;
 }
 
-/* Toggle */
-#toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  border: none;
+@keyframes grow {
+  from { width: 0; }
+}
+
+/* Contact Form */
+.contact input, .contact textarea {
+  width: 100%;
+  margin: 10px 0;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 8px;
+  border: none;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background: #ffd369;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-}
-
-.hero h2 {
-  margin-top: 10px;
-  color: #ffd369;
-}
-
-/* Links */
-.links a {
-  margin: 10px;
-  color: white;
-  text-decoration: none;
-}
-
-/* Button */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #ffd369;
+/* Chatbot */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  background: white;
   color: black;
-  border-radius: 25px;
-  text-decoration: none;
-}
-
-/* Cards */
-.card {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 25px;
-  border-radius: 15px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-}
-
-/* Skills */
-.skills span {
-  display: inline-block;
-  background: #ffd369;
-  color: black;
-  padding: 8px 15px;
-  margin: 5px;
-  border-radius: 20px;
-}
-
-/* Projects */
-.project {
-  margin-top: 15px;
-  padding: 15px;
   border-radius: 10px;
-  background: rgba(255,255,255,0.2);
-  transition: 0.3s;
+  overflow: hidden;
 }
 
-.project:hover {
-  transform: scale(1.03);
+.chat-header {
+  background: #333;
+  color: white;
+  padding: 10px;
 }
 
-/* Animation */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s;
+.chat-body {
+  height: 150px;
+  overflow-y: auto;
+  padding: 10px;
 }
 
-.show {
-  opacity: 1;
-  transform: translateY(0);
+#input {
+  width: 100%;
+  border: none;
+  padding: 10px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
+/* Scroll Button */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
